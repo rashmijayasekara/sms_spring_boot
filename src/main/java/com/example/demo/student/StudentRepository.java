@@ -11,4 +11,6 @@ public interface StudentRepository extends JpaRepository<Student,Long> { // the 
 
     // SELECT * FROM student WHERE email =? or else we can annotate this with @QUERY and add the query and that's jpql not straight sql
     Optional<Student> findStudentByEmail(String email);
+
+    void update(Long studentId, String name, String email);
 }
